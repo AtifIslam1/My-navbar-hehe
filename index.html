@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My nice looking Navbar :)</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/b1b4aa53c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="my-nav">
+        <div class="navigation">
+            <ul class="">
+                <li class="list active">
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-house"></i></span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-user"></i></span>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-message"></i></span>
+                        <span class="text">Message</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-images"></i></span>
+                        <span class="text">Photos</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+    </section>
+
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach((item) => item.classList.remove('active'));
+            this.classList.add('active');
+            
+        }
+        list.forEach((item) => item.addEventListener('click', activeLink));
+    </script>
+</body>
+
+</html>
